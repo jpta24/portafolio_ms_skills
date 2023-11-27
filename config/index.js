@@ -13,7 +13,7 @@ const cookieParser = require("cookie-parser");
 // unless the request if from the same domain, by default express wont accept POST requests
 const cors = require("cors");
 
-const GATEAPI_URL = process.env.ORIGIN || "http://localhost:5010";
+const GATEWAYAPI_URL = process.env.ORIGIN || "http://localhost:5010";
 // const FRONTEND_URL_2 = process.env.ORIGIN_2 || "http://localhost:8080";
 
 // Middleware configuration
@@ -26,7 +26,7 @@ module.exports = (app) => {
   app.use(
     cors({
       credentials: true,
-      origin: [GATEAPI_URL]
+      origin: [GATEWAYAPI_URL]
     })
   );
 
